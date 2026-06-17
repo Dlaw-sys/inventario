@@ -1,3 +1,109 @@
+const productos = {
+    arandanos: {
+        precio: 1500,
+        imagen: "img/arandanos.jpg"
+    },
+    cepillo: {
+        precio: 1800,
+        imagen: "img/cepillo.jpg"
+    },
+    Papel: {
+        precio: 1200,
+        imagen: "img/papel.jpg"
+    },
+    papas: {
+        precio: 1600,
+        imagen: "img/papas.jpg"
+    },
+    mango: {
+        precio: 2500,
+        imagen: "img/mango.jpg"
+    },
+    leche: {
+        precio: 3000,
+        imagen: "img/leche.jpg"
+    },
+    queso: {
+        precio: 4000,
+        imagen: "img/queso.jpg"
+    },
+    pan: {
+        precio: 3500,
+        imagen: "img/pan.jpg"
+    },
+    dove: {
+        precio: 2800,
+        imagen: "img/dove.jpg"
+    },
+    desohorante: {
+        precio: 6000,
+        imagen: "img/desohorante.jpg"
+    },
+    agua: {
+        precio: 4200,
+        imagen: "img/cielo.jpg"
+    },
+    celular: {
+        precio: 7500,
+        imagen: "img/celi.jpg"
+    },
+    yogurt: {
+        precio: 3000,
+        imagen: "img/yogurt.jpg"
+    },
+    pony: {
+        precio: 2500,
+        imagen: "img/pony.jpg"
+    },
+    arroz: {
+        precio: 4500,
+        imagen: "img/arroz.jpg"
+    },
+    pasta: {
+        precio: 3200,
+        imagen: "img/pasta.jpg"
+    },
+    pollo: {
+        precio: 12000,
+        imagen: "img/pollo.jpg"
+    },
+    carne: {
+        precio: 18000,
+        imagen: "img/carne.jpg"
+    },
+    pescado: {
+        precio: 15000,
+        imagen: "img/pescado.jpg"
+    },
+    huevos: {
+        precio: 9000,
+        imagen: "img/huevos.jpg"
+    }
+};
+const nombreInput = document.getElementById("nombre");
+const precioInput = document.getElementById("precio");
+const imagenProducto = document.getElementById("imagenProducto");
+
+nombreInput.addEventListener("input", () => {
+
+    const nombre = nombreInput.value.toLowerCase().trim();
+
+    if (productos[nombre]) {
+
+        precioInput.value = productos[nombre].precio;
+        imagenProducto.src = productos[nombre].imagen;
+        imagenProducto.style.display = "block";
+
+    } else {
+
+        precioInput.value = "";
+        imagenProducto.src = "";
+        imagenProducto.style.display = "none";
+
+    }
+
+});
+
 const btnAgregar = document.getElementById("btnAgregar");
 const tablaBody = document.querySelector("#tabla tbody");
 const totalGeneral = document.getElementById("totalGeneral");
