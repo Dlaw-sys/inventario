@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background: #f3f3f3;
+  background: #7fbee4;
   margin: 0;
   padding: 20px;
 }
@@ -11,7 +11,7 @@ h1 {
 }
 
 .card {
-  background: rgb(167, 225, 240);
+  background: rgb(6, 99, 122);
   padding: 20px;
   border-radius: 8px;
   max-width: 600px;
